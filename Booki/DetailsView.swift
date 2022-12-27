@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct DetailsView: View {
+    var chosenBook : BookDetail
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image(chosenBook.bookImageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.5)
+            Text(chosenBook.bookTitle)
+                .font(.largeTitle)
+                .bold()
+                .padding()
+            Text(chosenBook.bookAuthor)
+                .italic()
+        }
     }
 }
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView()
+        DetailsView(chosenBook: history1)
     }
 }

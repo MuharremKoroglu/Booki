@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView{
+            List {
+                ForEach (books) { book in
+                    Section {
+                        ForEach (book.bookDetail) { detail in
+                            NavigationLink {
+                                DetailsView(chosenBook: detail)
+                            } label: {
+                                Text(detail.bookTitle)
+                            }
+                        }
+                    } header: {
+                        Text(book.bookName)
+                    }
+                }
+            }.navigationTitle(Text("Booki"))
         }
-        .padding()
     }
 }
 
