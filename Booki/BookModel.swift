@@ -40,4 +40,10 @@ var science3 = BookDetail(bookTitle: "Starry Messenger", bookAuthor: "Neil deGra
 
 var science = BookModel(bookName: "Science", bookDetail: [science1, science2, science3])
 
-var books = [bestSeller, history, science]
+var computer1 = BookDetail(bookTitle: "The Shallows", bookAuthor: "Nicholas Carr", bookImageName: "computer1")
+var computer2 = BookDetail(bookTitle: "Designing Games", bookAuthor: "Tynan Sylvester", bookImageName: "computer2")
+var computer3 = BookDetail(bookTitle: "Token Economy", bookAuthor: "Shermin Voshmgir", bookImageName: "computer3")
+
+var computer = BookModel(bookName: "Computer", bookDetail: [computer1, computer2, computer3])
+
+var books = [bestSeller, history, science, computer]
